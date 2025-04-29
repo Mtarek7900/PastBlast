@@ -1,16 +1,22 @@
 body {
   margin: 0;
-  font-family: sans-serif, Cursive;
   background:  linear-gradient(to bottom, #05668d, #02c39a);
   overflow-x: hidden;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 2rem;
   gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .intro{
@@ -31,7 +37,6 @@ body {
 .intro .content{
   max-width: 700px;
   font-size: 1.3rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.8;
   color: #333;
   background: #f0f3bd;
@@ -57,7 +62,7 @@ body {
 
 .box .title {
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: large;
   font-weight: bold;
   text-align: center;
   
@@ -85,7 +90,7 @@ body {
   border-radius: 0;
   z-index: 999;
   
-  background: linear-gradient(to bottom, #d62828, #3a86ff);;
+  background: linear-gradient(to bottom, #d62828, #005f73);;
 }
 
 .box.expanded .content {
@@ -121,8 +126,10 @@ body {
   hyphens: auto; /* Adds hyphenation where needed */
   font-family: sans-serif;
 
-  background: linear-gradient(to bottom, #d62828, #fcbf49);
+  background: #f0f3bd;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+
