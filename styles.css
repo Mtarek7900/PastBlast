@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: sans-serif, Cursive;
+  background:  linear-gradient(to bottom, #05668d, #02c39a);
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.intro{
+  /* top: 0;
+  left: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  padding: 2rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.intro .content{
+  max-width: 700px;
+  font-size: 1.3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.8;
+  color: #333;
+  background: #f0f3bd;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+.box {
+  width: 300px;
+  height: 150px;
+  background: #f0f3bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.box .title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.box .content {
+  display: none;
+  padding: 1rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.box.expanded {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;        
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  border-radius: 0;
+  z-index: 999;
+  
+  background: linear-gradient(to bottom, #d62828, #3a86ff);;
+}
+
+.box.expanded .content {
+  /* display: block;
+  margin: 10px 20px 15px 20px;
+  font-size: 1.2rem;
+  font-family: sans-serif, Cursive;
+
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  
+  
+  width: auto;
+  max-width: 100%; 
+  box-sizing: border-box; 
+         
+  
+  background: #f0f3bd;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+
+  scrollbar-width: none;
+  display: block;
+  margin: 10px 20px 15px 20px;
+  padding: 15px;
+  overflow-y: auto;
+  height: 60%;
+  word-break: break-word; /* Most reliable for mobile */
+  overflow-wrap: anywhere; /* Modern alternative */
+  hyphens: auto; /* Adds hyphenation where needed */
+  font-family: sans-serif;
+
+  background: linear-gradient(to bottom, #d62828, #fcbf49);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
